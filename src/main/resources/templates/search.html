@@ -28,17 +28,128 @@
 
         <p>
             <label for="searchTerm">Keyword:</label>
-            <input type="text" name="searchTerm" id="searchTerm" />
+            <input type="text" name="searchTerm" id="searchTerm"/>
         </p>
 
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search"/>
     </form>
 
-    <hr />
+    <hr/>
 
-    <!-- TODO #2 - Loop over jobs map to display all job fields -->
+    <p></p>
+    <table th:class="job-listing" th:each="item : ${column}">
+        <tr th:each="category : ${job}">
+            <td th:text="${category.key}"></td>
+            <td th:text= "${category.value}"></td>
+        </tr>
+        <p></p>
+        <p></p>
+    </table>
+
+
+    <!-- Use the fragment to display the search results -->
+    <div th:replace="fragments :: result-listings"></div>
+
 
 </div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
